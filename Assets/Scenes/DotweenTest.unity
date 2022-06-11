@@ -662,7 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FillImage: {fileID: 1391243133}
   TMP: {fileID: 736973946}
-  RollOverTextColor: {r: 1, g: 1, b: 1, a: 0}
+  RollOverTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &653194460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FillImage: {fileID: 769869946}
   TMP: {fileID: 1350470942}
-  RollOverTextColor: {r: 1, g: 1, b: 1, a: 0}
+  RollOverTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1300924188
 GameObject:
   m_ObjectHideFlags: 0
