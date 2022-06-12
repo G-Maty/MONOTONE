@@ -17,6 +17,7 @@ public class StrongButton : MonoBehaviour
         transform.DOScale(0.2f, 1f)
         .SetRelative(true)
         .SetEase(Ease.OutQuart)
+        .SetLink(gameObject)
         .SetLoops(-1, LoopType.Restart);
     }
 }

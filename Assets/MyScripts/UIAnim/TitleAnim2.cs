@@ -14,6 +14,7 @@ public class TitleAnim2 : MonoBehaviour
         image.DOFade(endValue: 0f, duration: 3f)
             .SetEase(Ease.InQuart)
             .SetLoops(-1,LoopType.Yoyo)
+            .SetLink(gameObject)
             .Play();
     }
 
