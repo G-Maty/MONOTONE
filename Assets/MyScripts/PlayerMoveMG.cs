@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * プレイヤーの動きに関する処理
+ * 各プレイヤーにアタッチ
+ */
+
 public class PlayerMoveMG : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3f;

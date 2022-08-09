@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * ステージ管理
+ * ステージ間の遷移
+ * GameManagerオブジェクトにアタッチ
+ */
+
 public class GameMG : SingletonMonoBehaviour<GameMG>
 {
     [System.NonSerialized]
@@ -31,7 +37,13 @@ public class GameMG : SingletonMonoBehaviour<GameMG>
     {
         currentStageNum += 1;
         //コルーチンを実行
-        StartCoroutine(WaitForLoadScene());
+        StartCoroutine(Wait3ForLoadScene());
+    }
+
+    //現在のステージに戻す処理
+    public void RetryStage()
+    {
+        StartCoroutine(Wait2ForLoadScene());
     }
 
     public void TitletoStart()
@@ -41,7 +53,7 @@ public class GameMG : SingletonMonoBehaviour<GameMG>
     }
 
     //シーンの読み込みと待機を行うコルーチン
-    IEnumerator WaitForLoadScene()
+    IEnumerator Wait3ForLoadScene()
     {
         //3秒待つ
         yield return new WaitForSeconds(3);
@@ -49,9 +61,11 @@ public class GameMG : SingletonMonoBehaviour<GameMG>
         FadeManager.Instance.LoadScene(stageName[currentStageNum],0.5f);
     }
 
-    //ゲームオーバー処理
-    public void GameOver()
+    IEnumerator Wait2ForLoadScene()
     {
-
+        //2秒待つ
+        yield return new WaitForSeconds(2);
+        //シーン遷移
+        FadeManager.Instance.LoadScene(stageName[currentStageNum], 0.5f);
     }
 }

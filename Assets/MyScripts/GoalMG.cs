@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
+/*
+ * ゴール処理
+ * 親ゴールオブジェクトにアタッチ
+ */
+
 public class GoalMG : MonoBehaviour
 {
     [SerializeField] private GameObject goal;
@@ -24,7 +29,7 @@ public class GoalMG : MonoBehaviour
     {
         clearUI.DOFillAmount(1f, 1f).SetEase(Ease.InOutCubic).SetLink(gameObject).SetDelay(1f).Play();
         player.transform.DOScale(0f, 1f).SetEase(Ease.InBack,6f).SetLink(gameObject).Play();
-        Destroy(player,2f);
+        Destroy(player,1.5f);
         gamemg.NextStage();
     }
 }

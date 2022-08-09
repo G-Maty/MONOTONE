@@ -5,6 +5,11 @@ using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
 
+/*
+ * 文字アニメーション処理
+ * 各テキストにアタッチ
+ */
+
 public class TexitAnim : MonoBehaviour
 {
     //無料版でTMP用の拡張メソッドが使えない

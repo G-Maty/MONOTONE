@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * ƒVƒ“ƒOƒ‹ƒgƒ“ˆ—‚Ìİ’è
+ */
+
 public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T instance;
