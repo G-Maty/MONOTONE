@@ -1298,6 +1298,7 @@ MonoBehaviour:
   - TitleScene
   - Stage1
   - Stage2
+  - Stage3
 --- !u!4 &2056635094
 Transform:
   m_ObjectHideFlags: 0

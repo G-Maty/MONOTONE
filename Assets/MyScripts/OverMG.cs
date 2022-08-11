@@ -22,10 +22,10 @@ public class OverMG : MonoBehaviour
         overUI.color = new Color(255f,255f,255f,0f);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         overUI.DOFade(1f, 0.5f).SetEase(Ease.Linear).SetLink(gameObject).Play();
-        Destroy(collision.gameObject);
+        //Destroy(collision.gameObject);
         gamemg.RetryStage();
     }
 }

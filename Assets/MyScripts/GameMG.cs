@@ -43,7 +43,7 @@ public class GameMG : SingletonMonoBehaviour<GameMG>
     //現在のステージに戻す処理
     public void RetryStage()
     {
-        StartCoroutine(Wait2ForLoadScene());
+        StartCoroutine(Wait1halfForLoadScene());
     }
 
     public void TitletoStart()
@@ -61,10 +61,10 @@ public class GameMG : SingletonMonoBehaviour<GameMG>
         FadeManager.Instance.LoadScene(stageName[currentStageNum],0.5f);
     }
 
-    IEnumerator Wait2ForLoadScene()
+    IEnumerator Wait1halfForLoadScene()
     {
         //2秒待つ
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         //シーン遷移
         FadeManager.Instance.LoadScene(stageName[currentStageNum], 0.5f);
     }
