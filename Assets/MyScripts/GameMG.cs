@@ -46,6 +46,18 @@ public class GameMG : SingletonMonoBehaviour<GameMG>
         StartCoroutine(Wait1halfForLoadScene());
     }
 
+    public void RetryStage_NoCol()
+    {
+        FadeManager.Instance.LoadScene(stageName[currentStageNum], 0.5f);
+    }
+
+    //ƒ^ƒCƒgƒ‹‚É–ß‚·ˆ—
+    public void BackToTitle()
+    {
+        currentStageNum = 0;
+        FadeManager.Instance.LoadScene(stageName[currentStageNum], 0.5f);
+    }
+
     public void TitletoStart()
     {
         currentStageNum += 1;

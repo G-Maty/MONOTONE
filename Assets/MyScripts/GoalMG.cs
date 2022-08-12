@@ -19,6 +19,10 @@ public class GoalMG : MonoBehaviour
     private Renderer childrendererComponent;
     private GameMG gamemg;
 
+    [SerializeField]
+    private AudioClip goalSE;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +34,13 @@ public class GoalMG : MonoBehaviour
         clearEff = player.transform.GetChild(0).gameObject; //プレイヤーの子オブジェクトを取得
         childrendererComponent = clearEff.GetComponent<Renderer>();
         clearEff.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         //ゴール後の処理
+        //For Animation
         clearEff.SetActive(true);
         clearUI.DOFillAmount(1f, 1f).SetEase(Ease.InOutCubic).SetLink(gameObject).SetDelay(1f).Play();
         var sequence = DOTween.Sequence();
@@ -44,6 +50,9 @@ public class GoalMG : MonoBehaviour
         sequence.Join(childrendererComponent.material.DOFade(0f, 0.5f).SetEase(Ease.Linear));
         sequence.Play();
         Destroy(player,1.5f);
+        //For SE
+        audioSource.PlayOneShot(goalSE);
+
         gamemg.NextStage();
     }
 }

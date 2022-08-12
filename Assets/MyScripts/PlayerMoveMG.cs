@@ -15,6 +15,7 @@ public class PlayerMoveMG : MonoBehaviour
     private GameObject damageEff;
     private bool isJump = false; //ジャンプ中かどうか
     private bool isStop = false; //プレイヤーを止めるかどうか
+    public bool isWarp = false; //ワープ処理
 
     private Rigidbody2D rb;
     private Renderer rendererComponent;

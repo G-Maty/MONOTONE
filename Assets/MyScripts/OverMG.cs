@@ -14,18 +14,23 @@ public class OverMG : MonoBehaviour
     [SerializeField] private GameObject overzone;
     [SerializeField] private Image overUI;
     private GameMG gamemg;
+    [SerializeField]
+    private AudioClip damageSE;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         gamemg = GameObject.Find("GameManager").GetComponent<GameMG>();
         overUI.color = new Color(255f,255f,255f,0f);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         overUI.DOFade(1f, 0.5f).SetEase(Ease.Linear).SetLink(gameObject).Play();
         //Destroy(collision.gameObject);
+        audioSource.PlayOneShot(damageSE);
         gamemg.RetryStage();
     }
 }
