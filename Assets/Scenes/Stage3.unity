@@ -242,12 +242,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1421597977}
     m_Modifications:
     - target: {fileID: 5251512464214361460, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251512464214361460, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251512464214361460, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2021565624}
     - target: {fileID: 5251512464214361460, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251512464214361460, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251512464214361460, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Setting, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251512464214361460, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5251512464214361462, guid: cbb88569947791f48b05235cabaf9d59, type: 3}
       propertyPath: m_Name

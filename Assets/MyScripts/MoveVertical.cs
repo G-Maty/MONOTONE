@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class MoveFloor : MonoBehaviour
+public class MoveVertical : MonoBehaviour
 {
     [SerializeField]
-    private float distance = -5f;
+    private float distance = -1f;
     [SerializeField]
-    private float LoopTime = 1f;
+    private float Time = 1f;
+    [SerializeField]
+    private int LoopTimes = -1;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.DOMoveX(distance, LoopTime).SetEase(Ease.InOutQuad).SetLoops(-1,LoopType.Yoyo)
+        transform.DOMoveY(distance, Time).SetEase(Ease.InOutQuad).SetLoops(LoopTimes, LoopType.Yoyo)
             .SetLink(gameObject).Play();
     }
-
 }
