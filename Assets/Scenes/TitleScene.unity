@@ -1394,6 +1394,7 @@ MonoBehaviour:
   - Stage3
   - Stage4
   - Stage5
+  - Stage6
 --- !u!4 &2056635094
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Damage
+  - Stage
   layers:
   - Default
   - TransparentFX

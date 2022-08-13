@@ -21,6 +21,10 @@ public class PlayerMoveMG : MonoBehaviour
     private Renderer rendererComponent;
     private Renderer childrendererComponent;
 
+    [SerializeField]
+    private AudioClip colorChange;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +33,7 @@ public class PlayerMoveMG : MonoBehaviour
         damageEff = transform.GetChild(0).gameObject; //子オブジェクトを取得
         childrendererComponent = damageEff.GetComponent<Renderer>();
         damageEff.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +42,10 @@ public class PlayerMoveMG : MonoBehaviour
         if(isStop == false)
         {
             Movement(); //動く
+        }
+        if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            audioSource.PlayOneShot(colorChange);
         }
     }
 
