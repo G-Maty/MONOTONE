@@ -142,6 +142,7 @@ MonoBehaviour:
   jumpForce: 600
   isWarp: 0
   colorChange: {fileID: 8300000, guid: e13fc3c8bc020ec4b9922a25cd604ccf, type: 3}
+  jumpse: {fileID: 8300000, guid: 24d373f0a5c1fcb44a4a63d785e886fa, type: 3}
 --- !u!82 &-289733357198887606
 AudioSource:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

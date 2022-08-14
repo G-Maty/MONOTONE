@@ -6,7 +6,7 @@ using DG.Tweening;
 public class MoveVertical : MonoBehaviour
 {
     [SerializeField]
-    private float distance = -1f;
+    private float distance = 0f;
     [SerializeField]
     private float Time = 1f;
     [SerializeField]
@@ -15,7 +15,7 @@ public class MoveVertical : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.DOMoveY(distance, Time).SetEase(Ease.InOutQuad).SetLoops(LoopTimes, LoopType.Yoyo)
+        transform.DOMoveY(distance, Time).SetRelative(true).SetEase(Ease.InOutQuad).SetLoops(LoopTimes, LoopType.Yoyo)
             .SetLink(gameObject).Play();
     }
 }

@@ -23,6 +23,8 @@ public class PlayerMoveMG : MonoBehaviour
 
     [SerializeField]
     private AudioClip colorChange;
+    [SerializeField]
+    private AudioClip jumpse;
     private AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -63,6 +65,7 @@ public class PlayerMoveMG : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W) && !isJump) //空中ではジャンプできない
         {
+            audioSource.PlayOneShot(jumpse);
             rb.AddForce(transform.up * jumpForce); //力を加えてジャンプ
             isJump = true;
         }

@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571941ae050af53469af4832dd9b7d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: -1
+  distance: -4
   LoopTime: 1.5
 --- !u!60 &1404010578609416361
 PolygonCollider2D:
